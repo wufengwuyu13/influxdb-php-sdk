@@ -30,7 +30,7 @@ class Writer implements WritableInterface
             "auth" => [$this->getOptions()->getUsername(), $this->getOptions()->getPassword()],
             'query' => [
                 "db" => $this->getOptions()->getDatabase(),
-                "retentionPolicy" => $this->getOptions()->getRetentionPolicy(),
+                "rp" => $this->getOptions()->getRetentionPolicy(),
             ],
             "body" => $this->messageToLineProtocol($message, $this->getOptions()->getTags())
         ];
