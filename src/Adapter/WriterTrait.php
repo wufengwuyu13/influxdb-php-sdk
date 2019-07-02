@@ -40,8 +40,12 @@ trait WriterTrait
         }
 
         if (array_key_exists("time", $message)) {
-            $dt = new DateTime($message["time"]);
-            $unixepoch = (int)($dt->format("U") * 1e9);
+            if(is_int($message['time'])) {
+                $unixepoch = $message['time'];
+            }else{
+                $dt = new DateTime($message["time"]);
+                $unixepoch = (int)($dt->format("U") * 1e9);
+            }
         }
         $message["time"] = $unixepoch;
 
