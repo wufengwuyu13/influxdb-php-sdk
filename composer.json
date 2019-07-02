@@ -1,6 +1,6 @@
 {
     "name": "forrest/influxdb-sdk",
-    "description": "Send your app metrics to InfluxDB",  
+    "description": "Send your app metrics to InfluxDB ",
     "license": "MIT",  
     "type": "project",  
     "repositories": [  
